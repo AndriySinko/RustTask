@@ -1,6 +1,9 @@
 mod cli;
 mod playmode;
 
-fn main() {
+fn main() -> anyhow::Result<()> {
+    let cli = cli::parse();
+    match cli.command {
 
+    }
 }
