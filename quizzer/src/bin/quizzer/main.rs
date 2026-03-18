@@ -27,7 +27,7 @@ fn main() -> Result<()>{
 }
 
 fn run_quiz(path: &std::path::Path) -> Result<()> {
-    
+
 }
 
 fn enter_questions(path: &std::path::Path) -> Result<()> {
@@ -57,10 +57,6 @@ fn enter_questions(path: &std::path::Path) -> Result<()> {
             };
             answers.push(a);
         }
-
-        // let answers: [String; 4] = answers
-        //     .try_into()
-        //     .map_err(|_| anyhow!("internal error: failed to collect 4 answers"))?;
 
         let correct = loop {
             let s = prompt("  Enter index of correct answer (1-4): ")?;
