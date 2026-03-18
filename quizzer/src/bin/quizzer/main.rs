@@ -31,7 +31,6 @@ fn run_quiz(path: &std::path::Path) -> Result<()> {
 }
 
 fn enter_questions(path: &std::path::Path) -> Result<()> {
-    // Load existing questions so new ones are appended rather than replaced.
     let mut questions: Vec<Question> = if path.exists() {
         store::load_questions(path)?
     } else {
@@ -53,26 +52,26 @@ fn enter_questions(path: &std::path::Path) -> Result<()> {
                 if !s.is_empty() {
                     break s;
                 }
-                println!("  Answer cannot be empty.");
+                println!("Answer cannot be empty.");
             };
             answers.push(a);
         }
 
         let correct = loop {
-            let s = prompt("  Enter index of correct answer (1-4): ")?;
+            let s = prompt("Enter index of correct answer (1-4): ")?;
             match s.parse::<usize>() {
                 Ok(n) if (1..=4).contains(&n) => break n - 1,
-                _ => println!("  Please enter a number between 1 and 4."),
+                _ => println!("Please enter a number between 1 and 4."),
             }
         };
 
         questions.push(Question::new(p, answers, correct));
-        println!("  Question added. Total number of questions: {}\n", questions.len());
+        println!("Question added. Total number of questions: {}\n", questions.len());
     }
 
     store::save_questions(path, &questions)?;
     println!(
-        "Saved {} question(s) to {}.",
+        "Saved {} question to {}.",
         questions.len(),
         path.display()
     );
