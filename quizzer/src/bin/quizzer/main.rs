@@ -1,3 +1,6 @@
+mod cli;
+mod playmode;
+
 fn main() {
-    println!("Hello world");
+
 }
