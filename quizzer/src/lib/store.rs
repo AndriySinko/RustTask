@@ -1,6 +1,6 @@
 use std::path::Path;
 use anyhow::{Context, Result};
-use crate::questions::Question;
+use crate::question::Question;
 
 pub fn load_questions(path: &Path) -> Result<Vec<Question>> {
     let content = std::fs::read_to_string(path).with_context(|| format!("failed to read '{}'", path.display()))?;

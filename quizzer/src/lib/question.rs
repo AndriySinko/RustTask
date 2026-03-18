@@ -1,3 +1,5 @@
+
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Question {
     question: String,
     answer: Vec<String>,
@@ -24,10 +26,10 @@ impl Question {
     }
 
     pub fn correct_index(&self) -> usize {
-        self.correct_answer
+        self.correct_answer_index
     }
 
     pub fn is_correct(&self, answer: usize) -> bool {
-        self.correct_answer == answer
+        self.correct_answer_index == answer
     }
 }
