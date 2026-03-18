@@ -16,13 +16,18 @@ fn prompt(msg: &str) -> Result<String> {
     Ok(buf.trim().to_string())
 }
 
-fn main() {
+fn main() -> Result<()>{
 
     let cli = cli::Cli::parse();
     match cli.playmode {
         playmode::PlayMode::Question => enter_questions(&cli.file),
+        playmode::PlayMode::Quiz => run_quiz(&cli.file),
     }
 
+}
+
+fn run_quiz(path: &std::path::Path) -> Result<()> {
+    
 }
 
 fn enter_questions(path: &std::path::Path) -> Result<()> {
@@ -33,10 +38,10 @@ fn enter_questions(path: &std::path::Path) -> Result<()> {
         Vec::new()
     };
 
-    println!("Question-entering mode. Leave the prompt blank to stop.\n");
+    println!("You entered question setting mode. Leave space blank to exit this mode.\n");
 
     loop {
-        let p = prompt("Question prompt (empty to finish): ")?;
+        let p = prompt("Enter question (empty to finish): ")?;
         if p.is_empty() {
             break;
         }
@@ -58,7 +63,7 @@ fn enter_questions(path: &std::path::Path) -> Result<()> {
         //     .map_err(|_| anyhow!("internal error: failed to collect 4 answers"))?;
 
         let correct = loop {
-            let s = prompt("  Which answer is correct? (1-4): ")?;
+            let s = prompt("  Enter index of correct answer (1-4): ")?;
             match s.parse::<usize>() {
                 Ok(n) if (1..=4).contains(&n) => break n - 1,
                 _ => println!("  Please enter a number between 1 and 4."),
@@ -66,7 +71,7 @@ fn enter_questions(path: &std::path::Path) -> Result<()> {
         };
 
         questions.push(Question::new(p, answers, correct));
-        println!("  Question added. Total so far: {}\n", questions.len());
+        println!("  Question added. Total number of questions: {}\n", questions.len());
     }
 
     store::save_questions(path, &questions)?;
