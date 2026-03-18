@@ -1,12 +1,268 @@
-   0.018727500s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint: stale: changed "C:\\Users\\sladk\\Desktop\\FIIT\\Semester_4\\RUST\\RustTask\\quizzer\\src\\bin\\quizzer\\main.rs"
-   0.018769700s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint:           (vs) "C:\\Users\\sladk\\Desktop\\FIIT\\Semester_4\\RUST\\RustTask\\quizzer\\target\\debug\\.fingerprint\\quizzer-d97d71e78be2f20c\\dep-bin-quizzer"
-   0.018778200s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13418335224, nanos: 492290400 } < FileTime { seconds: 13418335225, nanos: 221816800 }
-   0.019007900s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint: fingerprint dirty for quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer)/Check { test: false }/TargetInner { name: "quizzer", doc: true, ..: with_path("C:\\Users\\sladk\\Desktop\\FIIT\\Semester_4\\RUST\\RustTask\\quizzer\\src\\bin\\quizzer\\main.rs", Edition2024) }
-   0.019047800s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\Users\\sladk\\Desktop\\FIIT\\Semester_4\\RUST\\RustTask\\quizzer\\target\\debug\\.fingerprint\\quizzer-d97d71e78be2f20c\\dep-bin-quizzer", reference_mtime: FileTime { seconds: 13418335224, nanos: 492290400 }, stale: "C:\\Users\\sladk\\Desktop\\FIIT\\Semester_4\\RUST\\RustTask\\quizzer\\src\\bin\\quizzer\\main.rs", stale_mtime: FileTime { seconds: 13418335225, nanos: 221816800 } }))
-   0.019821100s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint: stale: changed "C:\\Users\\sladk\\Desktop\\FIIT\\Semester_4\\RUST\\RustTask\\quizzer\\src\\bin\\quizzer\\main.rs"
-   0.019833800s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint:           (vs) "C:\\Users\\sladk\\Desktop\\FIIT\\Semester_4\\RUST\\RustTask\\quizzer\\target\\debug\\.fingerprint\\quizzer-0570133c0a1fdba6\\dep-test-bin-quizzer"
-   0.019839200s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13418335224, nanos: 492290400 } < FileTime { seconds: 13418335225, nanos: 221816800 }
-   0.019970400s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint: fingerprint dirty for quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer)/Check { test: true }/TargetInner { name: "quizzer", doc: true, ..: with_path("C:\\Users\\sladk\\Desktop\\FIIT\\Semester_4\\RUST\\RustTask\\quizzer\\src\\bin\\quizzer\\main.rs", Edition2024) }
-   0.019988400s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\Users\\sladk\\Desktop\\FIIT\\Semester_4\\RUST\\RustTask\\quizzer\\target\\debug\\.fingerprint\\quizzer-0570133c0a1fdba6\\dep-test-bin-quizzer", reference_mtime: FileTime { seconds: 13418335224, nanos: 492290400 }, stale: "C:\\Users\\sladk\\Desktop\\FIIT\\Semester_4\\RUST\\RustTask\\quizzer\\src\\bin\\quizzer\\main.rs", stale_mtime: FileTime { seconds: 13418335225, nanos: 221816800 } }))
+   0.059062000s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint: fingerprint error for quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("quizzer", ["lib"], "C:\\Users\\sladk\\Desktop\\FIIT\\Semester_4\\RUST\\RustTask\\quizzer\\src\\lib.rs", Edition2021) }
+   0.059165900s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer\target\debug\.fingerprint\quizzer-cf1d9ffecdfc1ca6\lib-quizzer`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.073083600s  INFO prepare_target{force=false package_id=clap v4.6.0 target="clap"}: cargo::core::compiler::fingerprint: fingerprint error for clap v4.6.0/Check { test: false }/TargetInner { benched: false, ..: lib_target("clap", ["lib"], "C:\\Users\\sladk\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\clap-4.6.0\\src\\lib.rs", Edition2024) }
+   0.073116400s  INFO prepare_target{force=false package_id=clap v4.6.0 target="clap"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer\target\debug\.fingerprint\clap-ea7443645380a9f3\lib-clap`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_libgit2_prerelease
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: git_midx_writer_dump
+  18: git_filter_source_repo
+  19: git_midx_writer_dump
+  20: BaseThreadInitThunk
+  21: RtlUserThreadStart
+   0.076895200s  INFO prepare_target{force=false package_id=clap_derive v4.6.0 target="clap_derive"}: cargo::core::compiler::fingerprint: fingerprint error for clap_derive v4.6.0/Build/TargetInner { benched: false, for_host: true, proc_macro: true, ..: lib_target("clap_derive", ["proc-macro"], "C:\\Users\\sladk\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\clap_derive-4.6.0\\src\\lib.rs", Edition2024) }
+   0.076926400s  INFO prepare_target{force=false package_id=clap_derive v4.6.0 target="clap_derive"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer\target\debug\.fingerprint\clap_derive-b7306fd43936efdb\lib-clap_derive`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.080847300s  INFO prepare_target{force=false package_id=syn v2.0.117 target="syn"}: cargo::core::compiler::fingerprint: fingerprint error for syn v2.0.117/Build/TargetInner { ..: lib_target("syn", ["lib"], "C:\\Users\\sladk\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.117\\src\\lib.rs", Edition2021) }
+   0.080870800s  INFO prepare_target{force=false package_id=syn v2.0.117 target="syn"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer\target\debug\.fingerprint\syn-0c7bf77d12822f82\lib-syn`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.081327400s  INFO prepare_target{force=false package_id=serde v1.0.228 target="serde"}: cargo::core::compiler::fingerprint: fingerprint error for serde v1.0.228/Check { test: false }/TargetInner { ..: lib_target("serde", ["lib"], "C:\\Users\\sladk\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.228\\src\\lib.rs", Edition2021) }
+   0.081344300s  INFO prepare_target{force=false package_id=serde v1.0.228 target="serde"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer\target\debug\.fingerprint\serde-b62a39f108dde16a\lib-serde`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_libgit2_prerelease
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: git_midx_writer_dump
+  18: git_filter_source_repo
+  19: git_midx_writer_dump
+  20: BaseThreadInitThunk
+  21: RtlUserThreadStart
+   0.084845600s  INFO prepare_target{force=false package_id=serde_derive v1.0.228 target="serde_derive"}: cargo::core::compiler::fingerprint: fingerprint error for serde_derive v1.0.228/Build/TargetInner { for_host: true, proc_macro: true, ..: lib_target("serde_derive", ["proc-macro"], "C:\\Users\\sladk\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_derive-1.0.228\\src\\lib.rs", Edition2021) }
+   0.084871800s  INFO prepare_target{force=false package_id=serde_derive v1.0.228 target="serde_derive"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer\target\debug\.fingerprint\serde_derive-0ecaf661bb19d891\lib-serde_derive`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.087943900s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint: fingerprint error for quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("quizzer", ["lib"], "C:\\Users\\sladk\\Desktop\\FIIT\\Semester_4\\RUST\\RustTask\\quizzer\\src\\lib.rs", Edition2021) }
+   0.087976200s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer\target\debug\.fingerprint\quizzer-3cd79fc1501a6ffc\test-lib-quizzer`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.088461700s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint: fingerprint error for quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer)/Check { test: false }/TargetInner { name: "quizzer", doc: true, ..: with_path("C:\\Users\\sladk\\Desktop\\FIIT\\Semester_4\\RUST\\RustTask\\quizzer\\src\\bin\\quizzer\\main.rs", Edition2021) }
+   0.088480500s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer\target\debug\.fingerprint\quizzer-29ba816751abae92\bin-quizzer`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.088893200s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint: fingerprint error for quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer)/Check { test: true }/TargetInner { name: "quizzer", doc: true, ..: with_path("C:\\Users\\sladk\\Desktop\\FIIT\\Semester_4\\RUST\\RustTask\\quizzer\\src\\bin\\quizzer\\main.rs", Edition2021) }
+   0.088910700s  INFO prepare_target{force=false package_id=quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer) target="quizzer"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer\target\debug\.fingerprint\quizzer-d7059876c6e26798\test-bin-quizzer`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   Compiling syn v2.0.117
+   Compiling serde_derive v1.0.228
+   Compiling clap_derive v4.6.0
+    Checking clap v4.6.0
+    Checking serde v1.0.228
     Checking quizzer v0.1.0 (C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.34s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 7.71s
