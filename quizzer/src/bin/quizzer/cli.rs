@@ -4,7 +4,7 @@ use crate::playmode;
 
 
 #[derive(Parser)]
-struct Cli{
+pub struct Cli{
     #[arg(short, long, default_value = "quiz.json")]
     file: PathBuf,
 
