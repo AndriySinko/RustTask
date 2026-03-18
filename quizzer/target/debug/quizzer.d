@@ -1,0 +1,1 @@
+C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer\target\debug\quizzer.exe: C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer\src\bin\quizzer\main.rs C:\Users\sladk\Desktop\FIIT\Semester_4\RUST\RustTask\quizzer\src\lib.rs
