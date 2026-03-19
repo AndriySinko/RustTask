@@ -3,6 +3,10 @@ use anyhow::{Context, Result};
 use crate::question::Question;
 
 pub fn load_questions(path: &Path) -> Result<Vec<Question>> {
+    if !path.exists() {
+        save_questions(path, &[])?;
+        return Ok(Vec::new());
+    }
     let content = std::fs::read_to_string(path).with_context(|| format!("failed to read '{}'", path.display()))?;
     serde_json::from_str(&content).with_context(|| format!("'{}' contains invalid JSON", path.display()))
 }

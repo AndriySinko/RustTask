@@ -25,7 +25,6 @@ fn main() -> Result<()>{
 
 fn run_quiz(path: &std::path::Path) -> Result<()> {
     let questions = store::load_questions(path)?;
-
     if questions.is_empty() {
         println!("No questions found. Use the 'question' subcommand to add questions");
         return Ok(());
@@ -33,15 +32,12 @@ fn run_quiz(path: &std::path::Path) -> Result<()> {
 
     let total = questions.len();
     let mut score = 0usize;
-
     println!("Starting a quiz with {total} question(s)\n");
-
     for (i, q) in questions.iter().enumerate() {
         println!("Question {} / {}: {}", i + 1, total, q.question());
         for (j, answer) in q.answers().iter().enumerate() {
             println!("  {}. {answer}", j + 1);
         }
-
         let answer = loop {
             let s = prompt("Your answer (1-4): ")?;
             match s.parse::<usize>() {
@@ -58,7 +54,7 @@ fn run_quiz(path: &std::path::Path) -> Result<()> {
         }
     }
 
-    println!("Quiz complete! Final score: {score} / {total}");
+    println!("Quiz completed! Final score: {score} / {total}");
     Ok(())
 }
 
@@ -68,7 +64,6 @@ fn enter_questions(path: &std::path::Path) -> Result<()> {
     } else {
         Vec::new()
     };
-
     println!("You entered question setting mode\n");
 
     loop {
@@ -96,7 +91,6 @@ fn enter_questions(path: &std::path::Path) -> Result<()> {
                 _ => println!("Please enter a number between 1 and 4"),
             }
         };
-
         questions.push(Question::new(p, answers, correct));
         println!("Question added. Total number of questions: {}\n", questions.len());
     }
