@@ -2,11 +2,10 @@ mod cli;
 mod playmode;
 
 use std::io::Write;
-use std::path::PathBuf;
 
+use anyhow::Result;
+use clap::Parser;
 use quizzer::{question::Question, store};
-use anyhow::{anyhow, Result};
-use clap::{Parser, Subcommand};
 
 fn prompt(msg: &str) -> Result<String> {
     print!("{msg}");
@@ -17,17 +16,50 @@ fn prompt(msg: &str) -> Result<String> {
 }
 
 fn main() -> Result<()>{
-
     let cli = cli::Cli::parse();
     match cli.playmode {
         playmode::PlayMode::Question => enter_questions(&cli.file),
         playmode::PlayMode::Quiz => run_quiz(&cli.file),
     }
-
 }
 
 fn run_quiz(path: &std::path::Path) -> Result<()> {
+    let questions = store::load_questions(path)?;
 
+    if questions.is_empty() {
+        println!("No questions found. Use the 'question' subcommand to add questions");
+        return Ok(());
+    }
+
+    let total = questions.len();
+    let mut score = 0usize;
+
+    println!("Starting a quiz with {total} question(s)\n");
+
+    for (i, q) in questions.iter().enumerate() {
+        println!("Question {} / {}: {}", i + 1, total, q.question());
+        for (j, answer) in q.answers().iter().enumerate() {
+            println!("  {}. {answer}", j + 1);
+        }
+
+        let answer = loop {
+            let s = prompt("Your answer (1-4): ")?;
+            match s.parse::<usize>() {
+                Ok(n) if (1..=4).contains(&n) => break n - 1,
+                _ => println!("Please enter a number between 1 and 4"),
+            }
+        };
+
+        if q.is_correct(answer) {
+            println!("Correct\n");
+            score += 1;
+        } else {
+            println!("Wrong! The correct answer is: {}\n", q.answers()[q.correct_index()]);
+        }
+    }
+
+    println!("Quiz complete! Final score: {score} / {total}");
+    Ok(())
 }
 
 fn enter_questions(path: &std::path::Path) -> Result<()> {
@@ -37,7 +69,7 @@ fn enter_questions(path: &std::path::Path) -> Result<()> {
         Vec::new()
     };
 
-    println!("You entered question setting mode. Leave space blank to exit this mode.\n");
+    println!("You entered question setting mode\n");
 
     loop {
         let p = prompt("Enter question (empty to finish): ")?;
@@ -48,11 +80,11 @@ fn enter_questions(path: &std::path::Path) -> Result<()> {
         let mut answers: Vec<String> = Vec::with_capacity(4);
         for i in 1..=4usize {
             let a = loop {
-                let s = prompt(&format!("  Answer {i}: "))?;
+                let s = prompt(&format!("\tAnswer {i}: "))?;
                 if !s.is_empty() {
                     break s;
                 }
-                println!("Answer cannot be empty.");
+                println!("Answer cannot be empty");
             };
             answers.push(a);
         }
@@ -61,7 +93,7 @@ fn enter_questions(path: &std::path::Path) -> Result<()> {
             let s = prompt("Enter index of correct answer (1-4): ")?;
             match s.parse::<usize>() {
                 Ok(n) if (1..=4).contains(&n) => break n - 1,
-                _ => println!("Please enter a number between 1 and 4."),
+                _ => println!("Please enter a number between 1 and 4"),
             }
         };
 
@@ -70,10 +102,6 @@ fn enter_questions(path: &std::path::Path) -> Result<()> {
     }
 
     store::save_questions(path, &questions)?;
-    println!(
-        "Saved {} question to {}.",
-        questions.len(),
-        path.display()
-    );
+    println!("Saved {} question to {}", questions.len(), path.display());
     Ok(())
 }
